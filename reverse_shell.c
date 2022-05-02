@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     int s;
 
     sa.sin_family = AF_INET;
-    sa.sin_addr.s_addr = inet_addr("192.168.56.122");
+    sa.sin_addr.s_addr = inet_addr("192.168.56.102");
     sa.sin_port = htons(5432);
 
     s = socket(AF_INET, SOCK_STREAM, 0);
