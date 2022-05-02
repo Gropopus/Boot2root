@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#define REMOTE_ADDR "192.168.56.102"
+#define REMOTE_ADDR "0.0.0.0"
 #define REMOTE_PORT 5432
 
 int main(int argc, char *argv[])
